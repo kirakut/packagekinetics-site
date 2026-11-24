@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PackageKinetics</title>
+<meta name="description" content="PackageKinetics Pty Ltd is a Melbourne company that owns and operates B2B brands, including BindAura corporate gifting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap">
+<style>
+/* Layout: one quiet column; a bold wordmark hero, then a portfolio grid where BindAura is live and the next slot is visibly "in the building". */
+:root{
+  --bg:#F6F7F9; --surface:#FFFFFF; --ink:#141A24; --muted:#5A6372; --line:#DDE1E8;
+  --accent:#1F5F5B; --accent-soft:#E3EFEE; --brand:#6C4CF1;
+  --display:"Sora","Segoe UI",system-ui,sans-serif;
+  --body:"Manrope","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F1319; --surface:#171C24; --ink:#EEF1F5; --muted:#9AA3B2; --line:#2A313C;
+  --accent:#6FC2BB; --accent-soft:#1B2B2C; --brand:#A08BFF; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1319; --surface:#171C24; --ink:#EEF1F5; --muted:#9AA3B2; --line:#2A313C;
+  --accent:#6FC2BB; --accent-soft:#1B2B2C; --brand:#A08BFF; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-0.01em}
+.label{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:28px;border-bottom:1px solid var(--line)}
+.mark{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-0.01em}
+.mark svg{width:28px;height:28px;flex:none}
+header nav{display:flex;gap:24px;font-weight:500;font-size:15px}
+header nav a{color:var(--ink);text-decoration:none}
+header nav a:hover{color:var(--accent)}
+
+.hero{padding-block:88px 72px;display:grid;gap:28px;max-width:820px}
+.hero h1{font-size:clamp(2.2rem,5.4vw,3.8rem);line-height:1.08;font-weight:700}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:60ch;margin:0}
+
+section{padding-block:56px;border-top:1px solid var(--line)}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:28px}
+.sec-head h2{font-size:1.7rem;font-weight:600}
+
+.portfolio{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.venture{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px;display:grid;gap:14px;align-content:start;min-width:0}
+.venture .top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.venture h3{font-size:1.45rem;font-weight:600}
+.venture p{margin:0;color:var(--muted)}
+.pill{font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.pill.live{background:var(--accent-soft);color:var(--accent)}
+.pill.next{border:1px dashed var(--line);color:var(--muted)}
+.venture.bindaura h3{color:var(--brand)}
+.venture.building{background:transparent;border-style:dashed}
+.venture a.go{font-weight:600}
+
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px}
+.pillars h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
+.pillars p{margin:0;color:var(--muted)}
+
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;align-items:start}
+.contact .big{font-family:var(--display);font-size:clamp(1.3rem,3vw,1.7rem);font-weight:600;word-break:break-word;user-select:all}
+.contact p{margin:6px 0 0;color:var(--muted)}
+
+footer{border-top:1px solid var(--line);padding-block:28px 40px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+@media (max-width:560px){header nav{display:none}.hero{padding-block:56px 48px}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark" aria-label="PackageKinetics">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="2" width="24" height="24" rx="6" fill="var(--accent)"/><path d="M9 20V8h5.5a4 4 0 0 1 0 8H9" fill="none" stroke="var(--bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 16l4.5 4" stroke="var(--bg)" stroke-width="2.4" stroke-linecap="round"/></svg>
+      PackageKinetics
+    </div>
+    <nav aria-label="Main"><a href="#brands">Our brands</a><a href="#what-we-do">What we do</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <div class="hero">
+    <div class="label">Melbourne, Australia</div>
+    <h1>We build and run <span>business-to-business</span> brands.</h1>
+    <p>PackageKinetics Pty Ltd is an Australian company that owns and operates brands selling products and services to businesses. Our first brand, BindAura, is open for business. More are in the building.</p>
+  </div>
+
+  <section id="brands" aria-labelledby="brands-h">
+    <div class="sec-head"><h2 id="brands-h">Our brands</h2><span class="label">Portfolio</span></div>
+    <div class="portfolio">
+      <article class="venture bindaura">
+        <div class="top"><h3>BindAura</h3><span class="pill live">Trading</span></div>
+        <p>Branded and personalised corporate gifts and curated gift packs for employee onboarding, recognition, client thank-yous, events and end-of-year celebrations.</p>
+        <a class="go" href="https://www.bindaura.com" target="_blank" rel="noopener">Visit bindaura.com →</a>
+      </article>
+      <article class="venture building">
+        <div class="top"><h3>Next brand</h3><span class="pill next">In the building</span></div>
+        <p>We are developing new B2B products and services. If you'd like to partner, supply or be an early customer, get in touch.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="what-we-do" aria-labelledby="wwd-h">
+    <div class="sec-head"><h2 id="wwd-h">What we do</h2></div>
+    <div class="pillars">
+      <div><h3>B2B products</h3><p>Made-to-order products for teams and clients, sourced through a vetted network of Australian suppliers.</p></div>
+      <div><h3>B2B services</h3><p>Programs that save businesses time, from planning and sourcing to packing and delivery.</p></div>
+      <div><h3>New ventures</h3><p>We test new ideas with real customers before we scale them, and keep each brand focused on one job.</p></div>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-h">
+    <div class="sec-head"><h2 id="contact-h">Contact</h2></div>
+    <div class="contact">
+      <div><div class="label">Company enquiries</div><div class="big">hello@packagekinetics.com</div><p>Partnerships, suppliers and general enquiries.</p></div>
+      <div><div class="label">Corporate gifting</div><div class="big">hello@bindaura.com</div><p>Quotes and orders for BindAura.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 PackageKinetics Pty Ltd · Melbourne, Victoria</span>
+    <span>ACN 704 038 639 · ABN 46 704 038 639</span>
+  </footer>
+</div>
+</body>
+</html>
